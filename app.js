@@ -28,7 +28,19 @@ function getCountryNameByIso3(isoCode){
  * @returns {Object}
  */
 function getCountrySummary(isoCode){
-    //complete with your code
+    const ciudad = countries.find(item => item.iso3 === isoCode);
+    const city = {
+         name: ciudad.name ,
+         iso3: ciudad.iso3,
+         iso2: ciudad.iso2,
+         phone_code: ciudad.phone_code,
+         capital: ciudad.capital,
+         currency: ciudad.currency,
+         tld: ciudad.tld,
+         region: ciudad.region,
+         emoji: ciudad.emoji,
+        };
+    return city;
 }
 
 function main() {
